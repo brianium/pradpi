@@ -1,14 +1,13 @@
 # pradpi
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to simplify working with the Amazon Product Advertising API
 
 ## Usage
 
-FIXME
+TODO
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Brian Scaturro
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License, the same as Clojure
