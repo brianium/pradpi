@@ -8,8 +8,7 @@
 (defn query
   "Get the query portion of the given url"
   [url]
-  (->> url
-       as-url
+  (->> (as-url url)
        (.getQuery)))
 
 (defn rfc3986
