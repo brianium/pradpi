@@ -13,7 +13,6 @@ A Clojure library designed to simplify working with the Amazon Product Advertisi
              :secret "my-secret"})
 
 ;; ItemLookup operation 
-
 (def result (item-lookup config {:IdType "UPC"
                                  :ItemId "862583000163"
                                  :SearchIndex "Toys"}))
