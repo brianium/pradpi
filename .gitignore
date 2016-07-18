@@ -10,4 +10,6 @@ pom.xml.asc
 .hgignore
 .hg/
 *.clj~
+*.xml~
 .gitignore~
+.DS_Store

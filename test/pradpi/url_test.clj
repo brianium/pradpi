@@ -27,3 +27,9 @@
     (let [pairs ["lol=rofl" "name=brian" "Lol=haha"]
           sorted (url/pairs pairs)]
       (is (= {"Lol" "haha", "lol" "rofl", "name" "brian"} sorted)))))
+
+(deftest create
+  (testing "creating a url with a map"
+    (let [root "http://w.c"
+          params {:name "brian"}]
+      (is (= "http://w.c?name=brian" (url/create root params))))))

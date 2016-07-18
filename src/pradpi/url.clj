@@ -1,7 +1,7 @@
 (ns pradpi.url
   "Functions for handling urls."
   (:require [clojure.java.io :refer [as-url]]
-            [clojure.string :refer [split replace]])
+            [clojure.string :refer [split replace join]])
   (:import  [java.net URLEncoder])
   (:refer-clojure :exclude [replace]))
 
@@ -26,3 +26,11 @@
        (apply merge)
        (reduce-kv #(assoc %1 %2 (rfc3986 %3)) {})
        (into (sorted-map))))
+
+
+(defn create
+  "Create a url string from a root url string and a map"
+  [root params]
+  (->> (map #(str (name (first %)) "=" (second %)) params)
+       (join "&")
+       (str root "?")))
