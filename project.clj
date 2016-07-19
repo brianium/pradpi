@@ -1,6 +1,6 @@
 (defproject pradpi "0.1.0"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "A library to simplify working with the Amazon Product Advertising API"
+  :url "https://github.com/brianium/pradpi"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
