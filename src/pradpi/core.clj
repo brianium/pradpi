@@ -39,4 +39,4 @@
 (defn item-lookup
   "Perform an ItemLookup operation"
   ([protocol config params] (request "ItemLookup" protocol config params))
-  ([config params] (request "ItemLookup" "http" config params)))
+  ([config params] (item-lookup "http" config params)))
