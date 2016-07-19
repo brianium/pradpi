@@ -9,7 +9,5 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
-*.clj~
-*.xml~
-.gitignore~
 .DS_Store
+*~

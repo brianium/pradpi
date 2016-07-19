@@ -1,5 +1,7 @@
 # pradpi
 
+[![Build Status](https://travis-ci.org/brianium/pradpi.svg?branch=master)](https://travis-ci.org/brianium/pradpi)
+
 A Clojure library designed to simplify working with the Amazon Product Advertising API
 
 ## Installation
