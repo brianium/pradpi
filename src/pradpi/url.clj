@@ -27,7 +27,6 @@
        (reduce-kv #(assoc %1 %2 (rfc3986 %3)) {})
        (into (sorted-map))))
 
-
 (defn create
   "Create a url string from a root url string and a map"
   [root params]
