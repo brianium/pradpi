@@ -2,6 +2,14 @@
 
 A Clojure library designed to simplify working with the Amazon Product Advertising API
 
+## Installation
+
+Add the following dependency to your `project.clj` file:
+
+```
+[pradpi "0.1.0"]
+```
+
 ## Usage
 
 ```clojure
