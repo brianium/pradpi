@@ -7,7 +7,7 @@ A Clojure library designed to simplify working with the Amazon Product Advertisi
 Add the following dependency to your `project.clj` file:
 
 ```
-[pradpi "0.1.0"]
+[pradpi "0.1.1"]
 ```
 
 ## Usage
