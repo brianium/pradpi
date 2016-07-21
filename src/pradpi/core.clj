@@ -1,6 +1,7 @@
 (ns pradpi.core
   (:require [pradpi.url :as url]
             [pradpi.hmac :as hmac]
+            [pradpi.group :as group]
             [naive-xml-reader.core :refer [read-xml]]
             [org.httpkit.client :as http]))
 
@@ -21,9 +22,9 @@
 
 (defn- handle-response
   "Unpack a an xml response into a hash map"
-  [resp]
+  [resp params]
   (future (let [{body :body} @resp]
-            (read-xml body))))
+            (read-xml body (group/xml-config params)))))
 
 (defn request
   "Perform a request against the Amazon Product Advertising API"
@@ -33,7 +34,7 @@
         uri (url/create (str protocol "://" host path) query)
         signed (hmac/signed uri (:secret config))
         response (http/get signed config)]
-    (handle-response response)))
+    (handle-response response params)))
   ([operation config params] (request "http" operation config params)))
 
 (defn item-lookup
