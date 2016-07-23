@@ -8,7 +8,7 @@
 (defn- add-path-if-group
   "Adds the given path to :list-paths if the given group is in :ResponseGroup"
   [params config group path]
-  (if (.contains group (get params :ResponseGroup "Small"))
+  (if (.contains (get params :ResponseGroup "Small") group)
     (update config :list-paths
             #(conj % path))
     config))

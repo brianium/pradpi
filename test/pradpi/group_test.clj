@@ -10,4 +10,9 @@
   (testing "response group with offers"
     (let [config (group/xml-config {:ResponseGroup "Offers"})]
       (is (= [[:items :item]
+              [:items :item :offers :offer]] (:list-paths config)))))
+
+  (testing "response group with offers and attributes"
+    (let [config (group/xml-config {:ResponseGroup "Offers,ItemAttributes"})]
+      (is (= [[:items :item]
               [:items :item :offers :offer]] (:list-paths config))))))
