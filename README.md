@@ -16,7 +16,8 @@ Add the following dependency to your `project.clj` file:
 ## Usage
 
 ```clojure
-(ns my-amazon.app)
+(ns my-amazon.app
+  (:require [pradpi.core :refer :all]))
 
 ;; minimum config map needed for requests
 (def config {:associate-tag "my-tag"
