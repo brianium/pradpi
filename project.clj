@@ -1,4 +1,4 @@
-(defproject pradpi "0.2.1"
+(defproject pradpi "0.2.2"
   :description "A library to simplify working with the Amazon Product Advertising API"
   :url "https://github.com/brianium/pradpi"
   :license {:name "Eclipse Public License"

@@ -21,11 +21,19 @@
                      "Offers"
                      [:items :item :offers :offer]))
 
+(defn- configure-upcs
+  "ItemAttributes can contain a list of upc elements"
+  [params config]
+  (add-path-if-group params
+                     config
+                     "ItemAttributes"
+                     [:items :item :item-attributes :upc-list :upc-list-element]))
+
 (defn xml-config
   "naive-xml requires a hint at which nodes are lists"
   [params]
   (let [conf {:list-paths [[:items :item]]}
-        transforms [configure-offers]
+        transforms [configure-offers configure-upcs]
         parameterized (map #(partial % params) transforms)
         applied (apply comp parameterized)]
     (applied conf)))
